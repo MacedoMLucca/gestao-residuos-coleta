@@ -1,0 +1,17 @@
+name: Continuos Integration
+
+on:
+    push:
+        branches: "feature/**"
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: Git Checkout
+            uses: action/checkout@v4
+        -   name: Setup Java JDK
+            uses: action/setup-java@v4
+            with:
+                distribution: 'temurin'
+                java-version: '17'
