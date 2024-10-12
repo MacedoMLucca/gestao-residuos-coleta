@@ -15,3 +15,5 @@ jobs:
             with:
                 distribution: 'temurin'
                 java-version: '17'
+        -   name: Testes unitarios
+            run: mvn test
